@@ -1,8 +1,34 @@
 import React from "react";
+import { useState } from "react";
 
 import "./Main.scss";
 
+let nextId = 1;
+
 const Main = () => {
+  const [value, setValue] = useState("");
+  const [comments, setComments] = useState([]);
+
+  const onChange = e => {
+    setValue(e.target.value);
+  };
+
+  const onInsertComment = text => {
+    const comment = {
+      id: nextId,
+      name: "sujiny_829",
+      text,
+    };
+    setComments(comments => comments.concat(comment));
+    nextId++;
+  };
+
+  const onSubmit = e => {
+    e.preventDefault();
+    onInsertComment(value);
+    setValue("");
+  };
+
   return (
     <>
       <header>
@@ -86,17 +112,32 @@ const Main = () => {
             </div>
             <div className="comment-area">
               <ul className="comment-list">
-                {/* <li>
-                                <span className="id">abc1234</span>
-                                <p className="comment-text">댓글입니다.댓글입니다.</p>
-                                <button className="btn-like"><i className="fa-regular fa-heart"></i></button>
-                                <button className="btn-delete"><i className="fa-solid fa-trash-can"></i></button>
-                            </li> */}
+                {comments.map(list => (
+                  <li key={list.id}>
+                    <span className="id">{list.name}</span>
+                    <p className="comment-text">{list.text}</p>
+                    <button className="btn-like">
+                      <i className="fa-regular fa-heart" />
+                    </button>
+                    <button className="btn-delete">
+                      <i className="fa-solid fa-trash-can" />
+                    </button>
+                  </li>
+                ))}
               </ul>
               <form>
                 <div className="input-area">
-                  <input type="text" placeholder="댓글달기" />
-                  <button className="btn-push" disabled>
+                  <input
+                    type="text"
+                    placeholder="댓글달기"
+                    value={value}
+                    onChange={onChange}
+                  />
+                  <button
+                    className="btn-push"
+                    onClick={onSubmit}
+                    disabled={!value ? true : false}
+                  >
                     게시
                   </button>
                 </div>
