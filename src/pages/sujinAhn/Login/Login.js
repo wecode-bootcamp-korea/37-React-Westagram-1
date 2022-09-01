@@ -46,7 +46,7 @@ const Login = () => {
             onClick={() => {
               navigate('"/main"');
             }}
-            disabled={!(id && pw) ? true : false}
+            disabled={!(id.includes("@") && pw.length >= 5 ? true : false)}
           >
             로그인
           </button>
