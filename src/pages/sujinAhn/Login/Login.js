@@ -44,9 +44,9 @@ const Login = () => {
           <button
             className="btn-login"
             onClick={() => {
-              navigate('"/main"');
+              navigate("/main-sujin");
             }}
-            disabled={!(id.includes("@") && pw.length >= 5 ? true : false)}
+            disabled={id.includes("@") && pw.length >= 5 ? false : true}
           >
             로그인
           </button>
