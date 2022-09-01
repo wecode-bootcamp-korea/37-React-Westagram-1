@@ -46,6 +46,7 @@ const Login = () => {
             onClick={() => {
               navigate('"/main"');
             }}
+            disabled={!(id && pw) ? true : false}
           >
             로그인
           </button>
