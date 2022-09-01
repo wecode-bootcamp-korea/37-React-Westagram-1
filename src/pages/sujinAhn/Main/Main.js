@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Comments from "./comments";
+import Comments from "./Comments";
 
 import "./Main.scss";
 
