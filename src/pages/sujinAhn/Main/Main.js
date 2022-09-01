@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Comments from "./comments";
 
 import "./Main.scss";
 
@@ -113,16 +114,7 @@ const Main = () => {
             <div className="comment-area">
               <ul className="comment-list">
                 {comments.map(list => (
-                  <li key={list.id}>
-                    <span className="id">{list.name}</span>
-                    <p className="comment-text">{list.text}</p>
-                    <button className="btn-like">
-                      <i className="fa-regular fa-heart" />
-                    </button>
-                    <button className="btn-delete">
-                      <i className="fa-solid fa-trash-can" />
-                    </button>
-                  </li>
+                  <Comments key={list.id} list={list} />
                 ))}
               </ul>
               <form>
