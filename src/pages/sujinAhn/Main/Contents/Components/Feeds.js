@@ -6,6 +6,7 @@ let nextId = 1;
 const Feeds = () => {
   const [value, setValue] = useState("");
   const [comments, setComments] = useState([]);
+  const [like, setLike] = useState(0);
 
   const onChange = e => {
     setValue(e.target.value);
@@ -30,6 +31,14 @@ const Feeds = () => {
   const removeComment = id => {
     setComments(comments => comments.filter(comment => comment.id !== id));
   };
+
+  const plusLikes = () => {
+    setLike(like + 1);
+  };
+  const minusLikes = () => {
+    setLike(like > 0 ? like - 1 : 0);
+  };
+
   return (
     <section className="feeds">
       <article>
@@ -52,8 +61,11 @@ const Feeds = () => {
         <div className="info-area">
           <div className="icon-wrap">
             {/* <button><i className="fa-regular fa-heart"></i></button> */}
-            <button>
+            <button onClick={plusLikes}>
               <i className="fa-solid fa-heart on" />
+            </button>
+            <button onClick={minusLikes}>
+              <i className="fa-regular fa-thumbs-down" />
             </button>
             <button>
               <i className="fa-regular fa-comment" />
@@ -71,7 +83,7 @@ const Feeds = () => {
               src="./images/sujinAhn/feed01.jpg"
               alt="프로필사진"
             />
-            <span className="id">abc1234</span>님 외 <span>10명</span>이
+            <span className="id">abc1234</span>님 외 <span>{like}명</span>이
             좋아합니다.
           </p>
           <div className="post-box">
