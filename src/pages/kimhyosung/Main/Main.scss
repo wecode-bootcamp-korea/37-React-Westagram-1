@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  height: 80px;
+}
+.nav1 {
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+  margin-left: 30px;
+  font-weight: 100;
+}
+
+.nav2 {
+  position: relative;
+}
+.fa-instagram:before {
+  content: '\f16d';
+  font-size: 40px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.nav3 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+  width: 150px;
+  font-size: 30px;
+}
+
+.search {
+  border: none;
+  border-radius: 5px;
+  background-color: gainsboro;
+  height: 30px;
+  width: 200px;
+  text-align: center;
+}
+.fa-magnifying-glass:before,
+.fa-search:before {
+  content: '\f002';
+  position: absolute;
+  left: 70px;
+  top: 10px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 800px;
+  margin-top: 30px;
+}
+#feeds {
+  position: relative;
+  border: 1px solid grey;
+  width: 500px;
+  height: 800px;
+}
+#main-right {
+  width: 500px;
+  height: 500px;
+}
+
+.article_header {
+  align-items: center;
+  height: 50px;
+}
+
+.header_content {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 10px;
+  gap: 15px;
+}
+.header_image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.image_content {
+  width: 100%;
+  height: 100%;
+}
+.article_image {
+  height: 500px;
+}
+.article_icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin-left: 10px;
+}
+.icon_wrap {
+  width: 100px;
+}
+.icon_1 {
+  margin-right: 10px;
+  font-size: 25px;
+}
+.icon_3 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 25px;
+}
+.article_content {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  gap: 10px;
+}
+.article_content_main {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.reply_form {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+.reply {
+  width: 80%;
+  margin-bottom: 0;
+  border: none;
+}
+button {
+  border: none;
+  background-color: white;
+
+  color: #0095f6;
+}
+.inputText {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.inputwrap {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+}
+li {
+  list-style: none;
+}
+#main_span {
+  padding: 5px;
+  margin-top: 0;
+}
+#main-rignt {
+  display: flex;
+  justify-content: center;
+}
+.right-content {
+  margin-left: 50px;
+}
+.me {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 10px 50px;
+  gap: 10px;
+}
+
+.story {
+  border: 1px solid #fafafa;
+  width: 400px;
+  height: 400px;
+}
+.recommend {
+  border: 1px solid #fafafa;
+  width: 400px;
+  height: 300px;
+  margin-top: 50px;
+}
+.story_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #fafafa;
+  padding: 10px;
+}
+.content-wrap {
+  height: 300px;
+  overflow: scroll;
+}
+.content1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #fafafa;
+  height: 80px;
+}
+
+.recommend-wrap {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+.user_name2 {
+  position: absolute;
+  padding: 60px;
+}
+.content2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #fafafa;
+  gap: 10px;
+  padding: 10px;
+
+  height: 50px;
+}
+.recommend-header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #fafafa;
+  padding: 10px;
+}
+.follow {
+  color: #0095f6;
+}
+
+#maindiv {
+  display: block;
+  overflow: hidden;
+  height: 20px;
+}
+
+.reply_content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60px;
+  overflow: scroll;
+}
+.reply_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+}
+.name {
+  padding-left: 30px;
+  font-weight: bold;
+}
+.content {
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.deLete {
+  font-size: 13px;
+  color: #0095f6;
+}
