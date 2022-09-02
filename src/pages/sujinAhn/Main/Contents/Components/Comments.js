@@ -3,7 +3,7 @@ import { useState } from "react";
 const Comments = ({ list, removeComment }) => {
   const [active, setActive] = useState(true);
 
-  const activeButton = () => {
+  const toggleLikeButton = () => {
     setActive(!active);
   };
 
@@ -11,7 +11,7 @@ const Comments = ({ list, removeComment }) => {
     <li>
       <span className="id">{list.name}</span>
       <p className="comment-text">{list.text}</p>
-      <button className="btn-like" onClick={activeButton}>
+      <button className="btn-like" onClick={toggleLikeButton}>
         <i className={active ? "fa-regular fa-heart" : "fa-solid fa-heart"} />
       </button>
       <button className="btn-delete" onClick={() => removeComment(list.id)}>

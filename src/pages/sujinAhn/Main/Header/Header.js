@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ toggleModal }) => {
   return (
     <header>
       <div className="wrap">
@@ -15,7 +15,7 @@ const Header = () => {
             <i className="fa-regular fa-user" />
           </li>
           <li>
-            <button className="profile-box">
+            <button className="profile-box" onClick={toggleModal}>
               <img
                 className="profile-image"
                 src="./images/sujinAhn/feed01.jpg"

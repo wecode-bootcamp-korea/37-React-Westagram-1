@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import Header from "./Header/Header";
 import Contents from "./Contents/Contents";
 import Modal from "./Modal/Modal";
@@ -6,11 +7,16 @@ import Modal from "./Modal/Modal";
 import "./Main.scss";
 
 const Main = () => {
+  const [active, setActive] = useState(true);
+  const toggleModal = () => {
+    setActive(!active);
+  };
+
   return (
     <>
-      <Header />
+      <Header toggleModal={toggleModal} />
       <Contents />
-      <Modal />
+      <Modal active={active} toggleModal={toggleModal} />
     </>
   );
 };

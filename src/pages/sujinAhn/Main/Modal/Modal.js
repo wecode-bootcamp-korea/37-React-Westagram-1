@@ -1,8 +1,8 @@
-const Modal = () => {
+const Modal = ({ active, toggleModal }) => {
   return (
     <>
-      <div className="dim-layer mypage">
-        <div className="dim-bg" />
+      <div className={active ? "dim-layer mypage" : "dim-layer mypage on"}>
+        <div className="dim-bg" onClick={toggleModal} />
         <div className="modal">
           <p className="my-profile">프로필</p>
           <p className="save-list">저장됨</p>
