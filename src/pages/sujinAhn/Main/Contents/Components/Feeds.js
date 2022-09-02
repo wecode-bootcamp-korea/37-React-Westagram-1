@@ -7,6 +7,7 @@ const Feeds = () => {
   const [value, setValue] = useState("");
   const [comments, setComments] = useState([]);
   const [like, setLike] = useState(0);
+  const [active, setActive] = useState(true);
 
   const onChange = e => {
     setValue(e.target.value);
@@ -35,8 +36,13 @@ const Feeds = () => {
   const plusLikes = () => {
     setLike(like + 1);
   };
+
   const minusLikes = () => {
     setLike(like > 0 ? like - 1 : 0);
+  };
+
+  const toggleMoreButton = () => {
+    setActive(!active);
   };
 
   return (
@@ -87,12 +93,14 @@ const Feeds = () => {
             좋아합니다.
           </p>
           <div className="post-box">
-            <p className="post hide">
+            <p className={active ? "post hide" : "post"}>
               <span className="id">sujiny_829</span>강아지 귀엽다.강아지
               귀엽다.강아지 귀엽다.강아지 귀엽다.강아지 귀엽다.강아지
               귀엽다.강아지 귀엽다.
             </p>
-            <button className="btn-more">더보기</button>
+            <button className="btn-more" onClick={toggleMoreButton}>
+              더보기
+            </button>
           </div>
         </div>
         <div className="comment-area">
