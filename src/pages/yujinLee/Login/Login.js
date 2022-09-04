@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+// import { Link } from "react-router-dom";
 import './Login.scss';
 
 const Login = () => {
-  const [userId, setUserId] = useState('전화번호, 사용자 이름 또는 이메일');
-  const [userPw, setUserPw] = useState('비밀번호');
+  const navigate = useNavigate();
+
+  const [userId, setUserId] = useState('');
+  const [userPw, setUserPw] = useState('');
 
   const saveUserId = e => {
     setUserId(e.target.value);
   };
-  console.log(userId);
 
   const saveUserPw = e => {
     setUserPw(e.target.value);
   };
 
   return (
-    <div className="wrapper">
+    <div className="loginWrapper">
       <div className="loginBox">
         <div className="logo">westagram</div>
         <form className="Container">
@@ -26,9 +29,9 @@ const Login = () => {
             name="userID"
             minLength="5"
             maxLength="20"
-            autoComplete="off"
             autoFocus="turu"
-            placeholder={userId}
+            autoComplete="off"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
           />
           <input
             onChange={saveUserPw}
@@ -36,18 +39,24 @@ const Login = () => {
             className="loginPw"
             name="userPW"
             maxLength="11"
-            autoComplete="off"
-            placeholder={userPw}
+            autoComplete="new-password"
+            placeholder="비밀번호"
           />
+          {/* <Link to="/main"> */}
           <button
-            // onClick={''}
+            onClick={() => {
+              navigate('/main');
+            }}
             type="submit"
             className="loginBtn"
-            // disabled="disabled"
+            // disabled={(userId.indexOf("@")!== -1) && (userPw.length > 5)? false : true}
+            disabled={!(userId.indexOf('@') !== -1 && userPw.length > 5)}
+            autoComplete="off"
             name="login"
           >
             로그인
           </button>
+          {/* </Link> */}
         </form>
         <a href="#!">
           <div className="forgotPw">비밀번호를 잊으셨나요?</div>

@@ -4,7 +4,7 @@
 
 
 
-.wrapper {
+.loginWrapper {
     @include flex(center, center);
     flex-direction: column;
     height: 100vh;
@@ -30,27 +30,13 @@
                             
                 input, 
                 button {
-                    margin-bottom: 2em;
                     padding: 1em;
                     font-size: $font-size-base;
                     font-weight: $font-weight-semibold;
-                    border-radius: 3px;
-                    // text-align: center;
                 }
-
+                
                 input, button:focus {
                     outline: none;
-                }
-
-                .loginBtn {
-                    background-color: $color-btn-blue;
-                    border-style: none;
-                    color: white;
-                    margin-top: 10px;
-                    
-                    &:hover {
-                         cursor: pointer;
-                     }
                 }
                 
                 input {
@@ -59,7 +45,24 @@
                     color: $color-font-grey;
                     border: $color-input-grey;
                 }
-            } //login-container
+                .loginBtn {
+                    width: 100%;
+                    background-color: midnightblue;
+                    border-style: none;
+                    border-radius: 3px;
+                    color: white;
+                    margin-top: 10px;
+                    
+                        &:hover {
+                            cursor: pointer;
+                        }
+
+                        &:disabled {
+                            background-color: $color-btn-blue;
+                        }
+                }
+
+                    } //login-container
             
             .forgotPw {
                 text-align: center;
@@ -79,4 +82,4 @@
                 font-weight: $font-weight-semibold;
             }
         }
-}
+    }

@@ -1,0 +1,65 @@
+@import '../../styles/common.css';
+@import '../../styles/reset.css';
+@import '../../styles/variables.scss';
+
+body {
+    background-color: $color-body-grey;
+    .mainWrapper {
+        @include flex(center, null);
+
+        main {
+            display: flex;
+            margin-top: calc($height-header + 20px); //나중에 calc로 nav높이+a로 수정하기
+            max-width: calc(470px + 32px + 319px);
+
+            .feedsContainer {
+                margin-right: 32px;
+                width: 470px;
+            }
+
+            .asideContainer {
+                width: 320px;
+            
+                .asideHeader {
+                    display: flex;
+                    padding: 10px;
+                    align-items: center;
+
+                    .myProfileImg {
+                        width: $width-profile-large;
+                        margin-right: 1em;
+                    }
+                    .myProfile {
+                        flex: 1 1 auto;
+                        line-height: 1.4em;
+
+                        .myProfileId {
+                            font-size: $font-size-lg;
+                            font-weight: $font-weight-semibold;
+                        }
+                        
+                        .myProfileName {
+                            font-size: $font-size-lg;
+                            color: $color-profile-grey;
+                        }
+                    }
+
+                    .checkout > a > p {
+                        font-weight: $font-weight-semibold;
+                        color: $color-font-blue;
+                    }
+                }
+                .friendRecommend {
+                    @include flex(space-between, null);
+                    margin: 16px 0;
+                    font-size: $font-size-sm;
+                    font-weight: $font-weight-semibold;
+
+                    a > span {
+                        color: $color-profile-grey;
+                        }
+                    }
+            }
+        }//main
+}
+}

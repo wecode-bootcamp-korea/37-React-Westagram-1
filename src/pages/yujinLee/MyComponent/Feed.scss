@@ -1,0 +1,111 @@
+@import '../../styles/common.css';
+@import '../../styles/reset.css';
+@import '../../styles/variables.scss';
+
+
+.feeds-parts {
+    border: 1px solid $color-search-grey;
+    background-color: $color-nav;
+    border-radius: 8px;
+
+    .feeds-parts-header {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+
+        .profile-img {
+            margin-right: 0.8em;
+            width: $width-profile-medium;
+            }
+
+        .profile {
+        flex: 1 1 auto;
+        line-height: 1.2em;
+
+            .profile-name {
+            font-weight: $font-weight-semibold;
+            }
+
+            .profile-des {
+            font-size: $font-size-xs;
+            
+                span::before {
+                    content: " · ";
+                    font-size: 15px;
+                    }
+            }
+        }
+        .more > a > i {
+            font-size: 30px;
+        }
+    }//header
+    .feeds-parts-img > img {
+        width: 470px;
+    }//피드 사진
+
+    .feeds-parts-icons {
+        @include flex(space-between, null);
+        
+        .icon {
+            font-size: $size-icon;
+            padding: 8px;
+        }
+    }//피드 아이콘
+    .feeds-parts-contents {
+        font-weight: $font-weight-bold;
+        padding: 10px;
+
+        .comments-list {
+            border-bottom: 1px solid $color-search-grey;
+        
+            .comments-parts {
+                @include flex(null, center);
+                flex-direction: row;
+                margin: 10px 0;
+            
+                strong {
+                    margin-right: 10px;
+                    font-weight: $font-weight-semibold;
+                }
+                p {
+                    flex: 1 1 auto;
+                    font-weight: $font-weight-regular;
+                }
+                i {
+                    margin : 5px;
+                }
+            }
+        }
+        .comments-add {
+            @include flex(null, center);
+            margin-top: 10px;
+
+            i {
+                font-size: $size-icon;
+                margin-right: 8px;
+                
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .new-comment {
+                flex: 1 1 auto;
+                padding: 5px;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+            .comments-add-btn {
+                font-size: 16px;
+                margin-left: 8px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
