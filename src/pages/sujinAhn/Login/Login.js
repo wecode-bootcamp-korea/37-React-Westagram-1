@@ -1,19 +1,18 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const [id, setId] = useState("");
-  const [pw, setPw] = useState("");
+  const [inputValues, setInputValues] = useState({
+    id: "",
+    password: "",
+  });
 
-  const saveUserId = e => {
-    setId(e.target.value);
-  };
-  const saveUserPw = e => {
-    setPw(e.target.value);
+  const handleInput = e => {
+    const { name, value } = e.target;
+    setInputValues({ ...inputValues, [name]: value });
   };
 
   return (
@@ -28,7 +27,7 @@ const Login = () => {
               name="id"
               placeholder="전화번호, 사용자 이름 또는 이메일"
               autoComplete="new-password"
-              onChange={saveUserId}
+              onChange={handleInput}
             />
             <input
               className="input-pw"
@@ -36,7 +35,7 @@ const Login = () => {
               name="password"
               placeholder="비밀번호"
               autoComplete="new-password"
-              onChange={saveUserPw}
+              onChange={handleInput}
             />
             <p className="notice">올바른 아이디와 비밀번호를 입력해주세요</p>
           </div>
@@ -46,7 +45,11 @@ const Login = () => {
             onClick={() => {
               navigate("/main-sujin");
             }}
-            disabled={id.includes("@") && pw.length >= 5 ? false : true}
+            disabled={
+              inputValues.id.includes("@") && inputValues.password.length >= 5
+                ? false
+                : true
+            }
           >
             로그인
           </button>

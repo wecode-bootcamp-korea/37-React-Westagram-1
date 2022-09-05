@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { INFO_LIST } from "./footerData";
+
 const Etc = () => {
   return (
     <section className="etc">
@@ -142,17 +145,14 @@ const Etc = () => {
         </ul>
       </div>
       <div className="footer">
-        <div className="text">
-          westagram<p>소개</p>
-          <p>도움말</p>
-          <p>홍보 센터</p>
-          <p>API </p>
-          <p>채용 정보</p>
-          <p>개인정보처리방침</p>
-          <p>약관</p>
-          <p>위치</p>
-          <p>언어</p>
-        </div>
+        <ul className="text">
+          westagram
+          {INFO_LIST.map(info => (
+            <li key={info.id}>
+              <Link to={info.url}>{info.content}</Link>
+            </li>
+          ))}
+        </ul>
         <p className="text">© 2022 INSTAGRAM FROM META</p>
       </div>
     </section>

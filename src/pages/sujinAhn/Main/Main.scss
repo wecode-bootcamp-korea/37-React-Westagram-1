@@ -376,11 +376,10 @@ main {
                 font-size: 14px;
                 color: #999;
 
-                p {
+                li {
                     display: inline-block;
                     padding: 0 5px 0 0;
                     line-height: 20px;
-                    color: #999;
                     text-decoration: none;
 
                     &:hover {
@@ -406,6 +405,11 @@ main {
                         margin-left: 5px;
                         background: #999;
                         border-radius: 50%;
+                    }
+
+                    a {
+                        color: #999;
+                        text-decoration: none;
                     }
                 }
             }
