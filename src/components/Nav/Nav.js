@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <header>
+    <header className="nav">
       <div className="wrap">
         <h1 className="logo">Westagram</h1>
         <input className="search" type="text" placeholder="검색" />
