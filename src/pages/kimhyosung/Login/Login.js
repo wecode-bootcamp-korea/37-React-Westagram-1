@@ -8,7 +8,7 @@ const LoginHyosung = () => {
   const [pw, setPw] = useState('');
   const navigate = useNavigate();
   const goToMain = () => {
-    navigate('/Main');
+    navigate('/main-hyosung');
   };
 
   const saveUserld = e => {
@@ -19,6 +19,7 @@ const LoginHyosung = () => {
     setPw(e.target.value);
     console.log(e.target.value);
   };
+  const isValid = id.includes('@') && pw.length > 4;
 
   return (
     <div>
@@ -40,13 +41,16 @@ const LoginHyosung = () => {
               onChange={saveUserPw}
               placeholder="비밀번호"
             />
-            <button id="login_btn" onClick={goToMain}>
+            <button
+              id="login_btn"
+              disabled={isValid ? false : true}
+              onClick={goToMain}
+            >
               로그인
             </button>
           </form>
           <div className="foot">비밀번호를 잊으셨나요?</div>
         </div>
-        {id.length > 3 ? <div>hello</div> : <div>bye</div>}
       </div>
     </div>
   );

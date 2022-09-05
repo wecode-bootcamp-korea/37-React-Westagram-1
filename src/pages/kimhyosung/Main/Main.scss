@@ -15,10 +15,13 @@ nav {
 .nav1 {
   font-size: 40px;
   font-family: 'Lobster', cursive;
+
   margin-left: 30px;
   font-weight: 100;
 }
-
+.navigator {
+  display: flex;
+}
 .nav2 {
   position: relative;
 }
@@ -122,8 +125,7 @@ nav {
 .article_content_main {
   display: flex;
   margin-top: 10px;
-  margin-bottom: 50px;
-  overflow: hidden;
+  margin-bottom: 10px;
 }
 .reply_form {
   position: absolute;
@@ -268,20 +270,43 @@ li {
   height: 20px;
 }
 .name {
-  padding-left: 30px;
+  padding-left: 15px;
   font-weight: bold;
+  width: 100px;
 }
 .content {
   width: 60%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-left: 20px;
 }
 .icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-.deLete {
-  font-size: 13px;
+.delete {
+  width: 10px;
   color: #0095f6;
+  margin-right: 10px;
+  padding: 0;
+  color: grey;
+}
+.heart {
+  width: 10px;
+  margin-right: 0;
+  padding: 0;
+  color: red;
+}
+.reply_text2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 20px;
+}
+.reply_wrap {
+  height: 100px;
+}
+.article_content_all {
+  height: 100px;
+  overflow: auto;
 }
