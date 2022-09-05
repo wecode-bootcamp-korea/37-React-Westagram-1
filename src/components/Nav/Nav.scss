@@ -1,0 +1,66 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: 10;
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 975px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    .logo {
+      font-family: 'Lobster', cursive;
+      font-size: 30px;
+      margin-bottom: 0;
+
+      &::before {
+        content: '\f16d';
+        display: inline-block;
+        font-family: "FontAwesome";
+        margin-right: 10px;
+      }
+    }
+
+    .search {
+      width: 250px;
+      padding: 5px 20px;
+      background-color: #fafafa;
+      background-image: url(../../../assets/sujinAhn/Main/magnifying-glass-solid.svg);
+      background-repeat: no-repeat;
+      background-position: 5px center;
+      background-size: 10px 10px;
+      border: 1px solid #dbdbdb;
+
+      &:focus {
+        background-image: none;
+
+        &::placeholder {
+          padding-left: 0;
+        }
+
+      }
+
+      &::placeholder {
+        color: #999;
+        padding-left: 5px;
+      }
+    }
+
+    .icon-wrap {
+      display: flex;
+      align-items: center;
+
+      li {
+        padding: 0 10px;
+        font-size: 22px;
+      }
+    }
+  }
+}
