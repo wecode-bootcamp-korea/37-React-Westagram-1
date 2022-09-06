@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Header from "./Header/Header";
+import Nav from "../../../components/Nav/Nav";
 import Contents from "./Contents/Contents";
 import Modal from "./Modal/Modal";
 
+import "../../../components/Nav/Nav.scss";
 import "./Main.scss";
 
 const Main = () => {
@@ -13,7 +14,7 @@ const Main = () => {
 
   return (
     <>
-      <Header toggleModal={toggleModal} />
+      <Nav />
       <Contents />
       <Modal active={active} toggleModal={toggleModal} />
     </>

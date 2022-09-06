@@ -112,13 +112,20 @@ const Feeds = () => {
           </li>
           <li className="comment-area">
             <ul className="comment-list">
-              {comments.map(list => (
+              {feedList.comment.map(list => (
                 <Comments
                   key={list.id}
                   list={list}
                   removeComment={removeComment}
                 />
               ))}
+              {/* {comments.map(list => (
+                <Comments
+                  key={list.id}
+                  list={list}
+                  removeComment={removeComment}
+                />
+              ))} */}
             </ul>
             <form>
               <div className="input-area">
