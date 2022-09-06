@@ -3,17 +3,17 @@
 @import '../../styles/variables.scss';
 
 
-.feeds-parts {
+.feedsParts {
     border: 1px solid $color-search-grey;
     background-color: $color-nav;
     border-radius: 8px;
 
-    .feeds-parts-header {
+    .feedsPartsHeader {
         display: flex;
         padding: 10px;
         align-items: center;
 
-        .profile-img {
+        .profileImg {
             margin-right: 0.8em;
             width: $width-profile-medium;
             }
@@ -22,11 +22,11 @@
         flex: 1 1 auto;
         line-height: 1.2em;
 
-            .profile-name {
+            .profileName {
             font-weight: $font-weight-semibold;
             }
 
-            .profile-des {
+            .profileDes {
             font-size: $font-size-xs;
             
                 span::before {
@@ -39,11 +39,11 @@
             font-size: 30px;
         }
     }//header
-    .feeds-parts-img > img {
+    .feedsPartsImg > img {
         width: 470px;
     }//피드 사진
 
-    .feeds-parts-icons {
+    .feedsPartsIcons {
         @include flex(space-between, null);
         
         .icon {
@@ -51,14 +51,14 @@
             padding: 8px;
         }
     }//피드 아이콘
-    .feeds-parts-contents {
+    .feedsPartsContents {
         font-weight: $font-weight-bold;
         padding: 10px;
 
-        .comments-list {
+        .commentsList {
             border-bottom: 1px solid $color-search-grey;
         
-            .comments-parts {
+            .commentsParts {
                 @include flex(null, center);
                 flex-direction: row;
                 margin: 10px 0;
@@ -76,7 +76,7 @@
                 }
             }
         }
-        .comments-add {
+        .commentsAdd {
             @include flex(null, center);
             margin-top: 10px;
 
@@ -89,7 +89,7 @@
                 }
             }
 
-            .new-comment {
+            .newComment {
                 flex: 1 1 auto;
                 padding: 5px;
 
@@ -98,7 +98,7 @@
                 }
 
             }
-            .comments-add-btn {
+            .commentsAddBtn {
                 font-size: 16px;
                 margin-left: 8px;
 
