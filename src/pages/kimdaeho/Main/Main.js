@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Main/Main.scss';
 import ArticleHead from './ArticleHead';
-import ArticleFooter from './AtrticleFooter';
+import ArticleFooter from './ArticleFooter';
 import MainRightList from './MainRightList';
 
 function Main() {

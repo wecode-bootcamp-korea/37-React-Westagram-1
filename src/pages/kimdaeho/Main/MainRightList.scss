@@ -1,0 +1,69 @@
+.main_right_list1 {
+  width: 100%;
+  height: 250px;
+  border: 1px solid rgb(234, 234, 234);
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 10px; /* 스크롤바의 너비 */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: rgb(234, 234, 234); /* 스크롤바의 색상 */
+
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff; /*스크롤바 뒷 배경 색상*/
+  }
+}
+
+.main_right_list_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+  }
+
+  p {
+    color: gray;
+  }
+}
+
+.section_list {
+  display: flex;
+  margin: 20px 0 10px 20px;
+}
+
+.section_list img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 4px double pink;
+}
+
+.section_list div {
+  margin-left: 15px;
+}
+
+.section_list a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.section_list p {
+  color: gray;
+}
+
+.main_right_list2 {
+  margin-top: 50px;
+  width: 100%;
+  border: 1px solid rgb(234, 234, 234);
+}

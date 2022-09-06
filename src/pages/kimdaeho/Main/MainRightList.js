@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Main/MainRightList.scss';
 
 function MainRightList() {
   return (

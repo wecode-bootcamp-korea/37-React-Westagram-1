@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import '../Main/ArticleFooter.scss';
 
-function AtrticleFooter() {
+function ArticleFooter() {
   const [inputValue, setInputValue] = useState('');
   const [commentList, setCommentList] = useState([]);
 
@@ -52,4 +53,4 @@ function AtrticleFooter() {
   );
 }
 
-export default AtrticleFooter;
+export default ArticleFooter;
