@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Comments from "./Comments";
+import CommentsList from "./CommentsList";
 
 let nextId = 1;
 
@@ -113,19 +114,15 @@ const Feeds = () => {
           <li className="comment-area">
             <ul className="comment-list">
               {feedList.comment.map(list => (
+                <CommentsList key={list.id} list={list} />
+              ))}
+              {comments.map(list => (
                 <Comments
                   key={list.id}
                   list={list}
                   removeComment={removeComment}
                 />
               ))}
-              {/* {comments.map(list => (
-                <Comments
-                  key={list.id}
-                  list={list}
-                  removeComment={removeComment}
-                />
-              ))} */}
             </ul>
             <form>
               <div className="input-area">
