@@ -1,9 +1,0 @@
-export default 
-comments.map((comment, idx) => {
-    return <li key={idx} className="commentsParts">
-        <strong className="commentsPartId">shout</strong>
-        <p className="commentsPartContent">{comment}</p>
-        <button><i className="fa-regular fa-heart"></i></button>
-        <button><i className="fa-solid fa-trash-can"></i></button>
-        </li>
-}
