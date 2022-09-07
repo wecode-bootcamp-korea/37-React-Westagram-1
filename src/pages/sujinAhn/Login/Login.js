@@ -15,6 +15,36 @@ const Login = () => {
     setInputValues({ ...inputValues, [name]: value });
   };
 
+  const signUp = e => {
+    e.preventDefault();
+    fetch("http://10.58.1.177:3000/auth/signin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify({
+        email: inputValues.id,
+        password: inputValues.password,
+      }),
+    })
+      .then(response => {
+        if (response.ok === true) {
+          return response.json();
+        }
+        // throw new Error("에러 발생!");
+      })
+      // .catch(error => console.log(error))
+      .then(data => {
+        if (data.accessToken) {
+          localStorage.setItem("token", data.accessToken);
+          alert("로그인 성공");
+          navigate("/main-sujin");
+        } else {
+          alert("로그인 실패");
+        }
+      });
+  };
+
   return (
     <div className="container">
       <div className="login-wrap">
@@ -42,9 +72,7 @@ const Login = () => {
           {/* <Link className="btn-login" to="/main">로그인</Link> */}
           <button
             className="btn-login"
-            onClick={() => {
-              navigate("/main-sujin");
-            }}
+            onClick={signUp}
             disabled={
               inputValues.id.includes("@") && inputValues.password.length >= 5
                 ? false
