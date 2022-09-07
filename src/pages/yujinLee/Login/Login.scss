@@ -1,85 +1,82 @@
-@import "../../styles/common.css";
-@import "../../styles/variables.scss";
-@import "../../styles/reset.css";
-
-
+@import '../../../styles/common.scss';
+@import '../../../styles/reset.scss';
+@import '../../../styles/variables.scss';
 
 .loginWrapper {
-    @include flex(center, center);
-    flex-direction: column;
-    height: 100vh;
+  @include flex(center, center);
+  flex-direction: column;
+  height: 100vh;
 
-    .loginBox {
-        width: 450px;
-        padding: 25px 35px;
-        border: 1px solid rgb(223, 223, 223);
-        margin: 20px auto;
-    
-        .logo {
-            font-family: 'Lobster', cursive;
-            font-size: 50px;
-            text-align: center;
-            padding: 0 0 20px;
-        }
+  .loginBox {
+    width: 450px;
+    padding: 25px 35px;
+    border: 1px solid rgb(223, 223, 223);
+    margin: 20px auto;
 
-        .Container {
-            @include flex(flex-start, null);
-            flex-direction: column;
-            margin-top: 40px;
-            height: 350px;
-                            
-                input, 
-                button {
-                    padding: 1em;
-                    font-size: $font-size-base;
-                    font-weight: $font-weight-semibold;
-                }
-                
-                input, button:focus {
-                    outline: none;
-                }
-                
-                input {
-                    margin-bottom: 10px;
-                    background-color: $color-input-grey;
-                    color: $color-font-grey;
-                    border: $color-input-grey;
-                }
-                .loginBtn {
-                    width: 100%;
-                    background-color: midnightblue;
-                    border-style: none;
-                    border-radius: 3px;
-                    color: white;
-                    margin-top: 10px;
-                    
-                        &:hover {
-                            cursor: pointer;
-                        }
-
-                        &:disabled {
-                            background-color: $color-btn-blue;
-                        }
-                }
-
-                    } //login-container
-            
-            .forgotPw {
-                text-align: center;
-                color: rgb(56,81,133);
-                font-weight: $font-weight-semibold;
-            }
-            
-        }
-        .createAcount {
-            width: 450px;
-            padding: 20px;
-            border: 1px solid rgb(223, 223, 223);
-            text-align: center;
-
-            span {
-                color: $color-font-blue;
-                font-weight: $font-weight-semibold;
-            }
-        }
+    .logo {
+      font-family: 'Lobster', cursive;
+      font-size: 50px;
+      text-align: center;
+      padding: 0 0 20px;
     }
+
+    .Container {
+      @include flex(flex-start, null);
+      flex-direction: column;
+      margin-top: 40px;
+      height: 350px;
+
+      input,
+      button {
+        padding: 1em;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      input,
+      button:focus {
+        outline: none;
+      }
+
+      input {
+        margin-bottom: 10px;
+        background-color: rgb(240, 240, 240);
+        color: rgb(176, 176, 176);
+        border: rgb(240, 240, 240);
+      }
+      .loginBtn {
+        width: 100%;
+        background-color: midnightblue;
+        border-style: none;
+        border-radius: 3px;
+        color: white;
+        margin-top: 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:disabled {
+          background-color: rgb(0, 149, 246);
+        }
+      }
+    } //login-container
+
+    .forgotPw {
+      text-align: center;
+      color: rgb(56, 81, 133);
+      font-weight: 600;
+    }
+  }
+  .createAcount {
+    width: 450px;
+    padding: 20px;
+    border: 1px solid rgb(223, 223, 223);
+    text-align: center;
+
+    span {
+      color: rgb(0, 149, 246);
+      font-weight: 600;
+    }
+  }
+}

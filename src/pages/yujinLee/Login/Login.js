@@ -49,7 +49,7 @@ const Login = () => {
             }}
             type="submit"
             className="loginBtn"
-            disabled={!(userId.indexOf('@') !== -1 && userPw.length >= 5)}
+            disabled={!(userId.indexOf('@') !== -1 && userPw.length > 5)}
             autoComplete="off"
             name="login"
           >

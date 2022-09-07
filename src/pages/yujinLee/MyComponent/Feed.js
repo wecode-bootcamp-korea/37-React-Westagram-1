@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './Feed.scss';
 
 const Feed = () => {
   const [comments, newComment] = useState([]);
@@ -12,7 +11,7 @@ const Feed = () => {
   const commentUploadBtn = () => {
     newComment(prevState => {
       setInput('');
-      return [input, ...prevState];
+      return [...prevState, input];
     });
   };
   // const commentUploadEnter =(e)=> {
@@ -31,7 +30,7 @@ const Feed = () => {
       <header className="feedsPartsHeader ">
         <img
           className="profileImg"
-          src={require('../../assects/profile-01.png')}
+          src={`${process.env.PUBLIC_URL}/images/yujin/profile-01.png`}
           alt="프로필사진"
         />
         <div className="profile">
@@ -47,7 +46,10 @@ const Feed = () => {
         </div>
       </header>
       <div className="feedsPartsImg">
-        <img src={require('../../assects/feeds-03.jpg')} alt="게시된 사진" />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/yujin/feeds-01.jpg`}
+          alt="게시된 사진"
+        />
       </div>
       <section className="feedsPartsIcons">
         <div className="iconsLeft">
@@ -108,6 +110,7 @@ const Feed = () => {
             placeholder="똑똑똑"
             value={input}
             onChange={handleInputChange}
+            autoComplete="off"
           />
           <button className="commentsAddBtn" onClick={commentUploadBtn}>
             게시

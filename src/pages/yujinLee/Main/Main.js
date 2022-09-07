@@ -1,15 +1,14 @@
-// import React from "react";
-// import "./Main.scss"
-import '../MyComponent/Header';
-import Header from '../MyComponent/Header';
+import Nav from '../../../components/Nav/Nav';
 import Feed from '../MyComponent/Feed';
-import './Main.scss';
 import FriendProfile from '../MyComponent/FriendProfile';
+import AsideFooter from '../MyComponent/AsideFooter';
+// import 'font-awesome/css/font-awesome.min.css';
+import '../Main/Main.scss';
 
 const Main = () => {
   return (
     <div className="mainWrapper">
-      <Header />
+      <Nav />
       <main>
         <article className="feedsContainer">
           <Feed />
@@ -18,7 +17,7 @@ const Main = () => {
           <header className="asideHeader">
             <img
               className="myProfileImg"
-              src={require('../../assects/profile-02.png')}
+              src={`${process.env.PUBLIC_URL}/images/yujin/profile-02.png`}
               alt="나의 프로필사진"
             />
             <div className="myProfile">
@@ -39,11 +38,8 @@ const Main = () => {
           </div>
           <ul>
             <FriendProfile />
-            <FriendProfile />
-            <FriendProfile />
-            <FriendProfile />
-            <FriendProfile />
           </ul>
+          <AsideFooter />
         </aside>
       </main>
     </div>

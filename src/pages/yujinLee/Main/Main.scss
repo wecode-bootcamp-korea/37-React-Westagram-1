@@ -1,65 +1,245 @@
-@import '../../styles/common.css';
-@import '../../styles/reset.css';
-@import '../../styles/variables.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/reset.scss';
+@import '../../../styles/variables.scss';
+@import '../../../components/Nav/Nav.scss';
+@import 'https://fonts.googleapis.com/css?family=Lobster';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css';
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  padding: 0;
+}
 
 body {
-    background-color: $color-body-grey;
-    .mainWrapper {
-        @include flex(center, null);
+  background-color: rgb(250, 250, 250);
 
-        main {
+  .mainWrapper {
+    @include flex(center, null);
+
+    main {
+      display: flex;
+      margin-top: calc(60px + 20px);
+      max-width: calc(470px + 32px + 319px);
+      //---------------------------피드-------------------------/
+      .feedsContainer {
+        margin-right: 32px;
+        width: 470px;
+
+        .feedsParts {
+          border: 1px solid rgb(239, 239, 239);
+          background-color: rgb(255, 255, 255);
+          border-radius: 8px;
+          //---------------------------피드 프로필-------------------------/
+          .feedsPartsHeader {
             display: flex;
-            margin-top: calc($height-header + 20px); //나중에 calc로 nav높이+a로 수정하기
-            max-width: calc(470px + 32px + 319px);
+            padding: 10px;
+            align-items: center;
 
-            .feedsContainer {
-                margin-right: 32px;
-                width: 470px;
+            .profileImg {
+              margin-right: 0.8em;
+              width: 50px;
             }
 
-            .asideContainer {
-                width: 320px;
-            
-                .asideHeader {
-                    display: flex;
-                    padding: 10px;
-                    align-items: center;
+            .profile {
+              flex: 1 1 auto;
+              line-height: 1.2em;
 
-                    .myProfileImg {
-                        width: $width-profile-large;
-                        margin-right: 1em;
-                    }
-                    .myProfile {
-                        flex: 1 1 auto;
-                        line-height: 1.4em;
+              .profileName {
+                font-weight: 600;
+              }
 
-                        .myProfileId {
-                            font-size: $font-size-lg;
-                            font-weight: $font-weight-semibold;
-                        }
-                        
-                        .myProfileName {
-                            font-size: $font-size-lg;
-                            color: $color-profile-grey;
-                        }
-                    }
+              .profileDes {
+                font-size: 12px;
 
-                    .checkout > a > p {
-                        font-weight: $font-weight-semibold;
-                        color: $color-font-blue;
-                    }
+                span::before {
+                  content: ' · ';
+                  font-size: 15px;
                 }
-                .friendRecommend {
-                    @include flex(space-between, null);
-                    margin: 16px 0;
-                    font-size: $font-size-sm;
-                    font-weight: $font-weight-semibold;
-
-                    a > span {
-                        color: $color-profile-grey;
-                        }
-                    }
+              }
             }
-        }//main
-}
+            .more > a > i {
+              font-size: 30px;
+            }
+          }
+          //---------------------------피드 사진-------------------------/
+          .feedsPartsImg > img {
+            width: 470px;
+            height: 586px;
+          }
+          //---------------------------피드 아이콘-------------------------/
+          .feedsPartsIcons {
+            @include flex(space-between, null);
+
+            .icon {
+              font-size: 24px;
+              padding: 8px;
+            }
+          }
+          //---------------------------피드 댓글창-------------------------/
+          .feedsPartsContents {
+            font-weight: 700;
+            padding: 10px;
+            .commentsList {
+              border-bottom: 1px solid rgb(239, 239, 239);
+
+              .commentsParts {
+                @include flex(null, null);
+                flex-direction: row;
+                margin: 10px 0;
+
+                strong {
+                  margin-right: 10px;
+                  font-weight: 600;
+                }
+                p {
+                  flex: 1 1 auto;
+                  font-weight: 400;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                }
+                i {
+                  margin: 5px;
+                }
+              }
+            }
+            //---------------------------피드 댓글입력창-------------------------/
+            .commentsAdd {
+              @include flex(null, center);
+              margin-top: 10px;
+
+              i {
+                font-size: 24px;
+                margin-right: 8px;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+
+              .newComment {
+                flex: 1 1 auto;
+                padding: 5px;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+              .commentsAddBtn {
+                font-size: 16px;
+                margin-left: 8px;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+      //---------------------------사이드바-------------------------/
+      .asideContainer {
+        width: 320px;
+
+        .asideHeader {
+          display: flex;
+          padding: 10px;
+          align-items: center;
+
+          .myProfileImg {
+            width: 70px;
+            margin-right: 1em;
+          }
+          .myProfile {
+            flex: 1 1 auto;
+            line-height: 1.4em;
+
+            .myProfileId {
+              font-size: 20px;
+              font-weight: 600;
+            }
+
+            .myProfileName {
+              font-size: 20px;
+              color: rgb(250, 250, 250);
+            }
+          }
+
+          .checkout > a > p {
+            font-weight: 600;
+            color: rgb(0, 149, 246);
+          }
+        }
+        .friendRecommend {
+          @include flex(space-between, null);
+          margin: 16px 0;
+          font-size: 14px;
+          font-weight: 600;
+
+          a > span {
+            color: rgb(250, 250, 250);
+          }
+        }
+        //---------------------------사이드 친구추천-------------------------/
+        .friendsParts {
+          @include flex(null, center);
+          margin-top: 10px;
+
+          .friendProfileImg {
+            width: 50px;
+            margin-right: 0.8em;
+          }
+
+          .friendProfile {
+            flex: 1 1 auto;
+            line-height: 1.2em;
+
+            .friendProfileName {
+              font-weight: 900;
+            }
+
+            .friendProfileDes {
+              font-size: 0.75em;
+              color: rgb(250, 250, 250);
+            }
+          }
+
+          .followBtn {
+            color: rgb(0, 149, 246);
+            font-weight: 600;
+          }
+        }
+        //---------------------------사이드 footer-------------------------/
+        .asideFooter {
+          margin-top: 2em;
+          line-height: 1.5em;
+
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li > a {
+              margin-right: 0.8em;
+              color: rgb(250, 250, 250);
+              font-size: 0.75em;
+            }
+          }
+          span {
+            display: inline-block;
+            margin-top: 2em;
+            font-size: 0.75em;
+            color: rgb(250, 250, 250);
+          }
+        }
+      }
+    }
+  }
 }
