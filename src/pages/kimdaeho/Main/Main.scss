@@ -1,0 +1,83 @@
+/* css reset */
+@import '../../../styles/reset.scss';
+
+/* font */
+@font-face {
+  font-family: 'newFont';
+  src: url('../../../../public/font/billabong.ttf') format('truetype');
+}
+
+/* main */
+main {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.feed_list {
+  width: 50%;
+}
+
+.feeds {
+  margin: 30px 0 100px 100px;
+  width: 720px;
+  min-width: 500px;
+  border-radius: 5px;
+  border: 1px solid rgb(234, 234, 234);
+}
+/* main - article */
+
+.article_main {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+/* main-right */
+.main_right {
+  position: absolute;
+  top: 150px;
+  left: 900px;
+  width: 400px;
+
+  .main_right_profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+    .right_profile_view {
+      margin-left: 10px;
+
+      h3 {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 17px;
+        color: gray;
+      }
+    }
+  }
+}
+
+/* display: block;
+    justify-content: center;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin:;
+    padding: ;
+    font-size: ;
+    color:#000;
+    overflow: hidden;
+    z-index: 10000; 
+    리팩토링 예시
+    */

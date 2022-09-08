@@ -1,3 +1,5 @@
+import '../Nav/Nav.scss';
+
 const Nav = () => {
   return (
     <header className="nav">

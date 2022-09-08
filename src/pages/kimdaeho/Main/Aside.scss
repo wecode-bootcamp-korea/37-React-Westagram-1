@@ -1,0 +1,16 @@
+.aside {
+  position: relative;
+  top: 20px;
+  left: 5px;
+  width: 400px;
+
+  span {
+    display: inline-block;
+    padding-bottom: 7px;
+    a {
+      text-decoration: none;
+      color: gray;
+      font-size: 18px;
+    }
+  }
+}
