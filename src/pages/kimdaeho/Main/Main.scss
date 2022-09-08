@@ -14,9 +14,13 @@ main {
   margin-top: 100px;
 }
 
+.feed_list {
+  width: 50%;
+}
+
 .feeds {
-  margin: 30px 0 100px 10%;
-  width: 80%;
+  margin: 30px 0 100px 100px;
+  width: 720px;
   min-width: 500px;
   border-radius: 5px;
   border: 1px solid rgb(234, 234, 234);
@@ -34,7 +38,7 @@ main {
 .main_right {
   position: absolute;
   top: 150px;
-  left: 65%;
+  left: 900px;
   width: 400px;
 
   .main_right_profile {
