@@ -24,113 +24,108 @@ const FOOTER_INFO = [
   },
 ];
 
-function Main_right(props) {
+function Main_right({ feed }) {
   return (
-    <>
-      <div id="main-right">
-        <div className="right">
-          <div className="me">
-            <img
-              className="header_image"
-              src="./images/jerry.jpeg"
-              alt="pho1"
-            />
-            <span className="user_name">jerrylolenzo</span>
-          </div>
+    <div id="main-right">
+      <div className="right">
+        <div className="me">
+          <img className="header_image" src="./images/jerry.jpeg" alt="pho1" />
+          <span className="user_name">jerrylolenzo</span>
         </div>
+      </div>
 
-        <div className="right-content">
-          <div className="story">
-            <div className="story_content">
-              <span id="story">스토리</span>
-              <span id="look">
+      <div className="right-content">
+        <div className="story">
+          <div className="story_content">
+            <span id="story">스토리</span>
+            <span id="look">
+              <strong>모두보기</strong>
+            </span>
+          </div>
+
+          <div className="content-wrap">
+            {feed.map((e, i) => {
+              return (
+                <Story
+                  key={i}
+                  id={e.id}
+                  userName={e.user_name}
+                  userImageBg={e.userImageBg}
+                  userImage={e.user_image}
+                />
+              );
+            })}
+          </div>
+
+          <div className="recommend">
+            <div className="recommend-header">
+              <span>회원님을 위한 추천</span>
+              <span>
                 <strong>모두보기</strong>
               </span>
             </div>
 
-            <div className="content-wrap">
-              {props.feed.map(e => {
-                return (
-                  <Story
-                    id={e.id}
-                    userName={e.user_name}
-                    userImageBg={e.userImageBg}
-                    userImage={e.user_image}
-                  />
-                );
-              })}
+            <div className="recommend-wrap">
+              <img
+                className="header_image"
+                src="./images/jerry.jpeg"
+                alt="pho1"
+              />
+              <span className="user_name2">jerrylolenzo</span>
+
+              <span className="follow">팔로우</span>
             </div>
 
-            <div className="recommend">
-              <div className="recommend-header">
-                <span>회원님을 위한 추천</span>
-                <span>
-                  <strong>모두보기</strong>
-                </span>
-              </div>
+            <div className="recommend-wrap">
+              <img
+                className="header_image"
+                src="./images/jerry.jpeg"
+                alt="pho1"
+              />
+              <span className="user_name2">jerrylolenzo</span>
 
-              <div className="recommend-wrap">
-                <img
-                  className="header_image"
-                  src="./images/jerry.jpeg"
-                  alt="pho1"
-                />
-                <span className="user_name2">jerrylolenzo</span>
-
-                <span className="follow">팔로우</span>
-              </div>
-
-              <div className="recommend-wrap">
-                <img
-                  className="header_image"
-                  src="./images/jerry.jpeg"
-                  alt="pho1"
-                />
-                <span className="user_name2">jerrylolenzo</span>
-
-                <span className="follow">팔로우</span>
-              </div>
-
-              <div className="recommend-wrap">
-                <img
-                  className="header_image"
-                  src="./images/jerry.jpeg"
-                  alt="pho1"
-                />
-                <span className="user_name2">jerrylolenzo</span>
-
-                <span className="follow">팔로우</span>
-              </div>
-
-              <div className="recommend-wrap">
-                <img
-                  className="header_image"
-                  src="./images/jerry.jpeg"
-                  alt="pho1"
-                />
-                <span className="user_name2">jerrylolenzo</span>
-
-                <span className="follow">팔로우</span>
-              </div>
+              <span className="follow">팔로우</span>
             </div>
 
-            <div className="aboutUs">
-              {FOOTER_INFO.map(info => {
-                return (
-                  <ul>
-                    <li className="aboutUs_content" key={info.id}>
-                      <a href={info.link}>
-                        <span>{info.text}</span>
-                      </a>
-                    </li>
-                  </ul>
-                );
-              })}
+            <div className="recommend-wrap">
+              <img
+                className="header_image"
+                src="./images/jerry.jpeg"
+                alt="pho1"
+              />
+              <span className="user_name2">jerrylolenzo</span>
+
+              <span className="follow">팔로우</span>
             </div>
+
+            <div className="recommend-wrap">
+              <img
+                className="header_image"
+                src="./images/jerry.jpeg"
+                alt="pho1"
+              />
+              <span className="user_name2">jerrylolenzo</span>
+
+              <span className="follow">팔로우</span>
+            </div>
+          </div>
+
+          <div className="aboutUs">
+            {FOOTER_INFO.map((info, i) => {
+              return (
+                <ul key={i}>
+                  <li className="aboutUs_content" id={info.id}>
+                    <a href={info.link}>
+                      <span>{info.text}</span>
+                    </a>
+                  </li>
+                </ul>
+              );
+            })}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

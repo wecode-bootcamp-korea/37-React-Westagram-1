@@ -1,12 +1,12 @@
 import React from 'react';
 import './Login.scss';
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const LoginHyosung = () => {
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
-  console.log(id);
+
   const login = e => {
     e.preventDefault();
     fetch('http://10.58.1.177:3000/auth/signin', {
@@ -28,7 +28,7 @@ const LoginHyosung = () => {
         }
         throw new Error('통신실패!'); // 6
       })
-      .catch(error => console.log(error)) // 7
+      .catch(error => error) // 7
       .then(data => {
         if (data.accessToken) {
           // 8

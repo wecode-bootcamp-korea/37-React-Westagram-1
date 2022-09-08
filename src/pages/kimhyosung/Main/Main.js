@@ -25,8 +25,9 @@ const Main = () => {
       <Nav />
       <div id="main">
         <div>
-          {feed.map(e => (
+          {feed.map((e, i) => (
             <Feeds
+              key={i}
               id={e.id}
               userName={e.user_name}
               userImageBg={e.userImageBg}

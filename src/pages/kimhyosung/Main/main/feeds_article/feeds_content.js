@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-function Feeds_content(props) {
+function FeedsContent({ a, handleClick }) {
   const [changed, setChanged] = useState(false);
   // const handleClick = e => {
   //   console.log(e);
@@ -8,24 +8,19 @@ function Feeds_content(props) {
   //   copy.splice(e, 1);
   // };
   return (
-    <>
-      <div className="reply_text2">
-        <h5 className="name">user</h5>
-        <span className="content">{props.a}</span>
-        <button
-          onClick={e => {
-            setChanged(!changed);
-          }}
-          className={
-            changed ? 'heart fa-solid fa-heart' : 'heart fa-regular fa-heart'
-          }
-        ></button>
-        <button
-          onClick={props.handleClick}
-          className="delete fa-solid fa-trash"
-        ></button>
-      </div>
-    </>
+    <div className="reply_text2">
+      <h5 className="name">user</h5>
+      <span className="content">{a}</span>
+      <button
+        onClick={e => {
+          setChanged(!changed);
+        }}
+        className={
+          changed ? 'heart fa-solid fa-heart' : 'heart fa-regular fa-heart'
+        }
+      />
+      <button onClick={handleClick} className="delete fa-solid fa-trash" />
+    </div>
   );
 }
-export default Feeds_content;
+export default FeedsContent;
