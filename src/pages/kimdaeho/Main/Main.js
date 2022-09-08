@@ -1,35 +1,37 @@
 import React from 'react';
-import '../Main/Main.scss';
+import { useEffect, useState } from 'react';
+import Nav from '../../../components/Nav/Nav';
 import ArticleHead from './ArticleHead';
 import ArticleFooter from './ArticleFooter';
 import MainRightList from './MainRightList';
+import '../Main/Main.scss';
+import Aside from './Aside';
+import Feed from './Feed';
 
 function Main() {
+  const [feedItem, setFeedItem] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/data.json')
+      .then(response => response.json())
+      .then(result => setFeedItem(result));
+  }, []);
+
   return (
     <>
-      <nav className="nav">
-        <div className="nav_logo">
-          <img src="../images/kimdaeho/instagram.png" alt="logo" />
-          <h1>Westagram</h1>
-        </div>
-        <div className="nav_search">
-          <input className="nav_search_input" type="text" placeholder="검색" />
-        </div>
-        <div className="nav_profile">
-          <img src="../images/kimdaeho/explore.png" alt="profile_icon1" />
-          <img src="../images/kimdaeho/1.png" alt="profile_icon2" />
-          <img src="../images/kimdaeho/profile.png" alt="profile_icon3" />
-        </div>
-      </nav>
+      <Nav />
       <main>
-        <div className="feeds">
-          <ArticleHead />
-          <img
-            className="article_main"
-            src="../images/kimdaeho/articleMain.png"
-            alt="article_main"
-          />
-          <ArticleFooter />
+        <div className="feed_list">
+          <div className="feeds">
+            <ArticleHead />
+            <img
+              className="article_main"
+              src="../images/kimdaeho/articleMain.png"
+              alt="article_main"
+            />
+            <ArticleFooter />
+          </div>
+          <Feed />
         </div>
         <div className="main_right">
           <div className="main_right_profile">
@@ -43,6 +45,7 @@ function Main() {
             </div>
           </div>
           <MainRightList />
+          <Aside />
         </div>
       </main>
     </>

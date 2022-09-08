@@ -7,51 +7,16 @@
   src: url('../../../../public/font/billabong.ttf') format('truetype');
 }
 
-/* nav */
-.nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 70px;
-  border-bottom: 1px solid rgb(234, 234, 234);
-  background: rgb(255, 255, 255);
-
-  .nav_logo {
-    display: flex;
-  }
-
-  img {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
-  }
-
-  h1 {
-    display: flex;
-    font-family: 'newFont';
-    font-size: 35px;
-  }
-
-  input {
-    width: 180px;
-    height: 20px;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 4px;
-    border: 1px solid rgb(234, 234, 234);
-    background: rgb(255, 255, 255);
-  }
-}
-
 /* main */
 main {
   display: flex;
   align-items: center;
+  margin-top: 100px;
 }
 
 .feeds {
   margin: 30px 0 100px 10%;
-  width: 45%;
+  width: 80%;
   min-width: 500px;
   border-radius: 5px;
   border: 1px solid rgb(234, 234, 234);
@@ -67,8 +32,9 @@ main {
 
 /* main-right */
 .main_right {
-  position: relative;
-  margin: -300px 0 0 180px;
+  position: absolute;
+  top: 150px;
+  left: 65%;
   width: 400px;
 
   .main_right_profile {
@@ -86,11 +52,12 @@ main {
       margin-left: 10px;
 
       h3 {
-        font-size: 20px;
+        font-size: 22px;
+        font-weight: 500;
       }
 
       p {
-        font-size: 15px;
+        font-size: 17px;
         color: gray;
       }
     }

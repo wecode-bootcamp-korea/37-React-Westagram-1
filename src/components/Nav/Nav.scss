@@ -23,7 +23,7 @@
       &::before {
         content: '\f16d';
         display: inline-block;
-        font-family: "FontAwesome";
+        font-family: 'FontAwesome';
         margin-right: 10px;
       }
     }
@@ -44,7 +44,6 @@
         &::placeholder {
           padding-left: 0;
         }
-
       }
 
       &::placeholder {

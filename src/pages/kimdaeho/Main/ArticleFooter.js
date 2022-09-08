@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Main/ArticleFooter.scss';
+import { useEffect } from 'react';
 
 function ArticleFooter() {
   const [inputValue, setInputValue] = useState('');
@@ -9,6 +10,14 @@ function ArticleFooter() {
     setCommentList([...commentList, inputValue]);
     setInputValue('');
   };
+
+  useEffect(() => {
+    fetch('/data/data.json')
+      .then(response => response.json())
+      .then(result => setFeedItem(result));
+  }, []);
+
+  const [feedItem, setFeedItem] = useState([]);
 
   return (
     <div className="article_footer">
@@ -29,9 +38,10 @@ function ArticleFooter() {
         </p>
         <p id="explanation_time">55분 전</p>
         <ul>
-          {commentList.map(comment => (
-            <p>
-              <a href="#!">ant_ddunddun</a> {comment}
+          {commentList.map((comment, index) => (
+            <p key={index}>
+              <a href="#!">ant_ddunddun</a>
+              {comment}
               <span>♡</span>
             </p>
           ))}
