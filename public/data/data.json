@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "user_name": "hyozzi92",
+    "user_image": "./images/jerry.jpeg",
+    "userImageBg": "./images/jerry-bg.jpeg"
+  },
+  {
+    "id": 2,
+    "user_name": "dropsbyjay",
+    "user_image": "./images/lysin.jpeg",
+    "userImageBg": "./images/bg-fearofgod1.jpeg"
+  },
+  {
+    "id": 3,
+    "user_name": "temporary_truth",
+    "user_image": "./images/monarisa.png",
+    "userImageBg": "./images/bg-fog2.jpeg"
+  },
+  {
+    "id": 4,
+    "user_name": "dongho73",
+    "user_image": "./images/sickboy.png",
+    "userImageBg": "./images/bg-fog3.jpeg"
+  },
+  {
+    "id": 5,
+    "user_name": "jhoooon_n",
+    "user_image": "/images/dog.jpeg",
+    "userImageBg": "./images/bg-fog4.png"
+  },
+  {
+    "id": 6,
+    "user_name": "beenkong",
+    "user_image": "./images/duck.jpeg",
+    "userImageBg": "./images/bg-fog5.png"
+  },
+  {
+    "id": 7,
+    "user_name": "juunhyuk",
+    "user_image": "./images/character.jpeg",
+    "userImageBg": "./images/bg-fog6.jpeg"
+  },
+  {
+    "id": 8,
+    "user_name": "dmdg1201",
+    "user_image": "./images/spray.jpeg",
+    "userImageBg": "./images/spray.jpeg"
+  }
+]

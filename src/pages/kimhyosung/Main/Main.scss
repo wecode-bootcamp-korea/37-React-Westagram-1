@@ -1,8 +1,14 @@
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: darkgray;
+  padding-left: 10px;
+}
+
 body {
-  background-color: white;
+  background-color: #fafafa;
 }
 
 nav {
@@ -67,6 +73,8 @@ nav {
   border: 1px solid grey;
   width: 500px;
   height: 800px;
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 #main-right {
   width: 500px;
@@ -226,7 +234,7 @@ li {
 }
 .user_name2 {
   position: absolute;
-  padding: 60px;
+  padding-left: 60px;
 }
 .content2 {
   display: flex;
@@ -309,4 +317,13 @@ li {
 .article_content_all {
   height: 100px;
   overflow: auto;
+}
+.aboutUs {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 13px;
+}
+.aboutUs_content {
+  margin-right: 10px;
 }
