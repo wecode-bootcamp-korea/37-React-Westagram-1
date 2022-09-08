@@ -1,10 +1,12 @@
 import React from 'react';
-import Nav from './Nav/Nav';
-import './Main.scss';
 import { useState, useEffect } from 'react';
-import Comment from './comment';
+import Nav from '../../../components/Nav/Nav';
+
 import Feeds from './main/feeds';
 import MainRight from './Main_right/Main-right';
+import '../../../components/Nav/Nav.scss';
+import './Main.scss';
+
 const Main = () => {
   const [feed, setFeed] = useState([]);
 

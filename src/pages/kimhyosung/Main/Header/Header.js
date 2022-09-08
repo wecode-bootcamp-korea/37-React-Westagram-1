@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Nav(props) {
+function Header(props) {
   return (
     <div className="all">
       <nav className="navigator">
@@ -24,4 +24,4 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default Header;
