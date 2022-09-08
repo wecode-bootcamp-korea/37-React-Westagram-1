@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Main/ArticleFooter.scss';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 function ArticleFooter() {
   const [inputValue, setInputValue] = useState('');
@@ -11,13 +11,13 @@ function ArticleFooter() {
     setInputValue('');
   };
 
-  useEffect(() => {
-    fetch('/data/data.json')
-      .then(response => response.json())
-      .then(result => setFeedItem(result));
-  }, []);
+  // useEffect(() => {
+  //   fetch('/data/data.json')
+  //     .then(response => response.json())
+  //     .then(result => setFeedItem(result));
+  // }, []);
 
-  const [feedItem, setFeedItem] = useState([]);
+  // const [feedItem, setFeedItem] = useState([]);
 
   return (
     <div className="article_footer">
@@ -47,7 +47,7 @@ function ArticleFooter() {
           ))}
         </ul>
       </div>
-      <form className="artice_footer_comment">
+      <form className="article_footer_comment">
         <a href="#!" onClick={addItem}>
           게시
         </a>

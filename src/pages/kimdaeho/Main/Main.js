@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import Nav from '../../../components/Nav/Nav';
 import ArticleHead from './ArticleHead';
 import ArticleFooter from './ArticleFooter';
@@ -9,13 +9,13 @@ import Aside from './Aside';
 import Feed from './Feed';
 
 function Main() {
-  const [feedItem, setFeedItem] = useState([]);
+  // const [feedItem, setFeedItem] = useState([]);
 
-  useEffect(() => {
-    fetch('/data/data.json')
-      .then(response => response.json())
-      .then(result => setFeedItem(result));
-  }, []);
+  // useEffect(() => {
+  //   fetch('/data/data.json')
+  //     .then(response => response.json())
+  //     .then(result => setFeedItem(result));
+  // }, []);
 
   return (
     <>

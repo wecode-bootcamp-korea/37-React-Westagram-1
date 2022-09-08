@@ -24,37 +24,37 @@ function Login() {
   //   .then(response => response.json())
   //   .then(data => console.log(data));
 
-  const signTest = () => {
-    fetch('http://10.58.5.122:3000/users/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify({
-        name: 'ss',
-        email: idValue,
-        password: pwValue,
-        profile_image: '',
-      }),
-    })
-      .then(response => response.json())
-      .then(data => console.log(data));
-  };
+  // const signTest = () => {
+  //   fetch('http://10.58.5.122:3000/users/signup', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //     },
+  //     body: JSON.stringify({
+  //       name: 'ss',
+  //       email: idValue,
+  //       password: pwValue,
+  //       profile_image: '',
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => console.log(data));
+  // };
 
-  const loginTest = () => {
-    fetch('http://10.58.5.122:3000/users/signin', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify({
-        email: idValue,
-        password: pwValue,
-      }),
-    })
-      .then(response => response.json())
-      .then(data => console.log(data));
-  };
+  // const loginTest = () => {
+  //   fetch('http://10.58.5.122:3000/users/signin', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //     },
+  //     body: JSON.stringify({
+  //       email: idValue,
+  //       password: pwValue,
+  //     }),
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => console.log(data));
+  // };
 
   return (
     <section className="section">
@@ -83,10 +83,10 @@ function Login() {
               test();
             }}
           />
-          <button disabled={disabled} id="loginBtn" onClick={loginTest}>
+          <button disabled={disabled} id="loginBtn">
             로그인
           </button>
-          <button disabled={disabled} id="loginBtn" onClick={signTest}>
+          <button disabled={disabled} id="loginBtn">
             회원가입
           </button>
         </main>
